@@ -1,5 +1,6 @@
 <template>
   <div class="radar">
+    <h1 class="radar-title">雷达维度图 <a class="title-link" href="https://github.com/lceric/radar-creator" target="_blank">github源码</a> </h1>
     <Radar :options="options" :theme="theme"></Radar>
     <el-form class="radar-form" :model="options" label-width="80px">
       <!-- label-position="" -->
@@ -48,11 +49,22 @@ export default {
       theme: 'default',
     }
   },
+  methods: {
+    routerToGithub() {
+      window.open('')
+    }
+  }
 }
 </script>
 <style scoped>
 .radar {
   /* display: flex; */
+}
+.radar-title {
+  font-size: 26px;
+}
+.title-link {
+  font-size: 18px;
 }
 .radar-form {
   width: 750px;
